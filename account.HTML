@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аккаунт - Обмен вещами</title>
+  <link rel="stylesheet" href="obmen.CSS">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Логотип Обмен вещами" class="logo">
+    <nav>
+      <div class="search-filter">
+        <a href="obmen.HTML">Вернуться на главную</a>
+      </div>
+    </nav>
+    <div class="auth-buttons">
+      <a href="account.html" id="accountBtn">Аккаунт</a>
+      <a href="#" id="logoutBtn">Выход</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="account-container">
+      <h2>Ваш профиль</h2>
+      <div class="account-info">
+        <img id="profileImage" src="" alt="Фото профиля" style="display: none; max-width: 150px; border-radius: 50%;">
+        <input type="file" id="profileImageInput" accept="image/*">
+        <p><strong>Имя:</strong> <span id="profileUsername"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <p><strong>О себе:</strong> <textarea id="profileBio" placeholder="Расскажите о себе"></textarea></p>
+        <button onclick="saveProfile()">Сохранить изменения</button>
+      </div>
+      <h2>Ваши объявления</h2>
+      <div class="listings" id="userListings"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Обмен вещами. Все права защищены.</p>
+    <p><a href="mailto:support@swap.ru">Связь с поддержкой</a> | <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    <p>Контакты: support@swap.ru | +7 (999) 123-45-67</p>
+  </footer>
+
+  <script src="account.JS"></script>
+</body>
+</html>

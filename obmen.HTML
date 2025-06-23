@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обмен вещами</title>
+  <link rel="stylesheet" href="obmen.CSS">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Логотип Обмен вещами" class="logo">
+    <nav>
+      <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Поиск товара...">
+        <select id="categoryFilter">
+          <option value="">Все категории</option>
+          <option value="Электроника">Электроника</option>
+          <option value="Одежда">Одежда</option>
+          <option value="Мебель">Мебель</option>
+          <option value="Книги">Книги</option>
+        </select>
+      </div>
+    </nav>
+    <div class="auth-buttons">
+      <a href="#" id="loginBtn">Вход</a>
+      <a href="#" id="registerBtn">Регистрация</a>
+      <a href="account.html" id="accountBtn" style="display: none;">Аккаунт</a>
+      <a href="#" id="logoutBtn" style="display: none;">Выход</a>
+    </div>
+  </header>
+
+  <main>
+    <button id="addListingBtn" style="display: none;">Добавить объявление</button>
+    <div class="listings" id="listings"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Обмен вещами. Все права защищены.</p>
+    <p><a href="mailto:support@swap.ru">Связь с поддержкой</a> | <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    <p>Контакты: support@swap.ru | +7 (999) 123-45-67</p>
+  </footer>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <h2>Вход</h2>
+      <div class="error" id="loginError"></div>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Пароль">
+      <button onclick="login()">Войти</button>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <h2>Регистрация</h2>
+      <div class="error" id="registerError"></div>
+      <input type="text" id="registerUsername" placeholder="Имя пользователя">
+      <input type="email" id="registerEmail" placeholder="Email">
+      <input type="password" id="registerPassword" placeholder="Пароль">
+      <button onclick="register()">Зарегистрироваться</button>
+    </div>
+  </div>
+
+  <div class="modal" id="addListingModal">
+    <div class="modal-content">
+      <h2>Добавить объявление</h2>
+      <input type="text" id="listingTitle" placeholder="Название">
+      <textarea id="listingDescription" placeholder="Описание"></textarea>
+      <input type="text" id="listingCategory" placeholder="Категория">
+      <input type="text" id="listingAddress" placeholder="Адрес">
+      <input type="file" id="listingImage" accept="image/*">
+      <img id="imagePreview" style="display: none; max-width: 100%; margin-top: 10px;">
+      <button onclick="addListing()">Создать</button>
+    </div>
+  </div>
+
+  <script src="obmen.JS"></script>
+</body>
+</html>
